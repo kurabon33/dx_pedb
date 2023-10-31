@@ -1,3 +1,4 @@
+# 数値は環境によって変わる
 import pyautogui
 
 pyautogui.sleep(10)

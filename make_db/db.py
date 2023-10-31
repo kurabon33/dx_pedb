@@ -51,5 +51,5 @@ for i in cur.execute(select_test):
     for j in i:
         print(j)
 
-#データベースの接続終了
+#データベースの接続終了 
 con.close

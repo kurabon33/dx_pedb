@@ -4,6 +4,7 @@ import tkinter.font as tkFont
 import sqlite3
 import textwrap
 
+# 画面遷移の処理
 def change_app(nowwindow, towindow):
     c_serch_frames = [frame1,frame2,frame3,frame4,frame5,frame6,frame7,frame8,frame9,frame10]
     menu_frames = [frame_titl, frame_serch, frame_com_serch]
@@ -32,14 +33,12 @@ def change_app(nowwindow, towindow):
             f.pack_forget()
     towindow.tkraise()
 
-
+# チェックボックス
 def make_check_box(item, check, flame):
     yoko = 0
     tate = 1
     for i in range(len(item)):
-        # BooleanVarオブジェクトを作成しリストのcheck要素に追加
         check[i] = tk.BooleanVar()
-        # チェックボタンの作成と配置
         ttk.Checkbutton(flame,
                     variable = check[i],
                     text = item[i]
@@ -49,6 +48,7 @@ def make_check_box(item, check, flame):
             tate += 1
             yoko = 0
 
+# 検索
 def serch_ef(nowwindow):
     global main_frame_s_result, serch_keyword, serch_keyword1, frame_input_error, space_frame
     c_list = [syn_check, time_check, skl_check, trg_check, rng_check, lmt_check, knd_check]
@@ -120,7 +120,7 @@ def serch_ef(nowwindow):
         space_frame.pack(expand=1, fill=tk.BOTH)
 
 
-
+# 検索結果
 def make_result(result_list, nowwindow):
     global frame_serch_result, button_change_main_frame_s_result2, space_frame, tree
     frame_serch_result.destroy()
@@ -224,6 +224,7 @@ def make_result(result_list, nowwindow):
     label = ttk.Label(space_frame, padding=[10,canvas.cget('height'),10]).pack(expand=1, fill=tk.BOTH)
     space_frame.pack(expand=1, fill=tk.BOTH)
 
+# エフェクトの詳細
 def make_effect(event):
     global frame_effect_info, tree
     record_id = tree.focus()

@@ -140,4 +140,4 @@ for syn in syn_list:
     out_path = f"{syn}_ef_list.csv"
     with open(out_path, 'w', newline='') as file:
         writer = csv.writer(file, quoting=csv.QUOTE_ALL,delimiter=',')
-        writer.writerows(ef_list)
+        writer.writerows(ef_list) 

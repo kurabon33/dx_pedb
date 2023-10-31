@@ -11,7 +11,7 @@ for syn in syn_list:
     csv_path = f"./dx_csv_3/{syn}_ef_list.csv"
     with open(csv_path, 'r') as csv_file:
         csv_reader = csv.reader(csv_file)
-        # Passing the cav_reader object to list() to get a list of lists
+        # Passing the cav_reader object to list() to get a list of lists 
         list_of_rows = list(csv_reader)
         ef_list += list_of_rows[1:]
 
