@@ -11,13 +11,13 @@ import csv
 syn_list = ["eh", "br", "bd", "bs", "km", "ez", "hm", "mf", "nm", "ok", "sm", "sr", "ub", "rb", "cm"]
 
 for syn in syn_list:
-    path = f"./TecoGAN-master/results/{syn}/*"
+    path = f"results/{syn}/*"
     files = glob.glob(path)
     ef_list = [["名前","最大レベル","タイミング","技能","難易度","対象","射程","侵蝕値","制限","前提条件","効果"]]
     for file in files:
         ef = []
         img = Image.open(file)
-        if file == "./TecoGAN-master/results/ub/ub_ra_0.png":
+        if file == "results/ub/ub_ra_0.png":
             w, h = img.size
             img = img.resize((w*4, h*4), Image.Resampling.LANCZOS)
             print("ウロボのアージ！")
@@ -137,7 +137,7 @@ for syn in syn_list:
         print()
         print()
         
-    out_path = f"{syn}_ef_list.csv"
+    out_path = f"dx_csv/{syn}_ef_list.csv"
     with open(out_path, 'w', newline='') as file:
         writer = csv.writer(file, quoting=csv.QUOTE_ALL,delimiter=',')
         writer.writerows(ef_list) 

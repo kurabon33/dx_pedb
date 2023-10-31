@@ -2,7 +2,7 @@ import sqlite3
 import csv
 
 #dbの作成または接続
-con = sqlite3.connect("dx_ef_list.db")
+con = sqlite3.connect("../main/dx_ef_list.db")
 cur = con.cursor()
 
 #テーブルの作成、存在しない場合のみ
@@ -14,7 +14,7 @@ delete_test = "DELETE FROM dx_ef_list"
 cur.execute(delete_test)
 
 #csvファイルの指定
-open_csv = open("ef_list_cmp.csv")
+open_csv = open("../make_csv/dx_csv_add/ef_list_cmp.csv")
 
 #csvファイルを読み込む
 read_csv = csv.reader(open_csv)
@@ -36,8 +36,7 @@ con.commit()
 open_csv.close()
 
 #テーブルの確認
-select_test = "SELECT name, skill, syndrome, effect FROM dx_ef_list where name like '%骨の剣%'"
-select_test = "SELECT name, level, timing, skill, diffculty, target, range, cost, limited, kinds, effect, books FROM dx_ef_list where syndrome like '%エンジェルハィロゥ%' or syndrome like '%バロール%'"
+select_test = "SELECT name, level, timing, skill, diffculty, target, range, cost, limited, kinds, effect, books FROM dx_ef_list where syndrome like '%ダミー%'"
 
 print("—————————-")
 print("fetchall")

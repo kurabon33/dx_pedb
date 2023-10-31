@@ -363,7 +363,7 @@ canvas.create_window((0,0), window=main_frame_menu, anchor=tk.NW, width=canvas.c
 
 frame_titl = ttk.Frame(main_frame_menu, style='AAA.TFrame')
 label_1 = ttk.Label(frame_titl, text='ぱーふぇくとえふぇくとでーたべーす（仮）', foreground='red',background="black",font =("Helvetica",20)).pack()
-image_2 = tk.PhotoImage(file='dc3_logo.ppm')
+image_2 = tk.PhotoImage(file='dx3_logo.ppm')
 label_2 = ttk.Label(frame_titl, image=image_2).pack()
 frame_titl.pack(anchor=tk.N, fill=tk.BOTH, pady=2)
 
@@ -386,7 +386,7 @@ canvas.create_window((0,0), window=main_frame_c_serch, anchor=tk.NW, width=canva
 
 frame1 = ttk.Frame(main_frame_c_serch, style='AAA.TFrame')
 label_1 = ttk.Label(frame1, text='ぱーふぇくとえふぇくとでーたべーす（仮）', foreground='red',background="black",font =("Helvetica",20)).pack()
-image_2a = tk.PhotoImage(file='dc3_logo.ppm')
+image_2a = tk.PhotoImage(file='dx3_logo.ppm')
 label_2 = ttk.Label(frame1, image=image_2a).pack()
 frame1.pack(anchor=tk.N, fill=tk.BOTH, pady=2)
 

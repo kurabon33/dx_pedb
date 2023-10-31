@@ -22,7 +22,7 @@ for j in range(14):
             width = 235
             height = 360
             screenshot = pyautogui.screenshot(region = (left, top, width, height))
-            screenshot.save(f'dx/cm/cm_e_ea_{e_c}.png')
+            screenshot.save(f'../make_csv/results/cm/output_cm_e_ea_{e_c}.png')
             e_c += 1
             row += 1
         if row > 2:

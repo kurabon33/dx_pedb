@@ -22,7 +22,7 @@ for syn in syn_list:
                 width = 235
                 height = 360
                 screenshot = pyautogui.screenshot(region = (left, top, width, height))
-                screenshot.save(f'dx/{syn}/{syn}_e_ea_{e_c}.png')
+                screenshot.save(f'../make_csv/results/{syn}/output_{syn}_e_ea_{e_c}.png')
                 e_c += 1
         if LR == "L":
             LR = "R"
