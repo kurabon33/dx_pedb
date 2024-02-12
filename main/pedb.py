@@ -498,6 +498,6 @@ def main():
     main_frame.tkraise()
     root.mainloop()
 
-
+# 動作用
 if __name__ == "__main__":
     main()
